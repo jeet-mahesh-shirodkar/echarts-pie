@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+// import ReactEcharts from 'echarts-for-react';
 import './App.css';
+import EchartsPie from './Components/echartsPie.js';
+// import D3Pie from "./Components/d3Pie.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+export default class App extends React.Component{
+  render() {
+    const data=[
+      {value:30, name:'React.JS'},
+      {value:15, name:'HTML'},
+      {value:15, name:'CSS'},
+      {value:40, name:'JavaScript'}
+    ]
+    return (
+      <div>
+      <EchartsPie/>
+      {/* <D3Pie /> */}
     </div>
-  );
+    );
+  }
 }
 
-export default App;
